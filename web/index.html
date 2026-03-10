@@ -1,0 +1,46 @@
+cat > /Users/anuradhasrinivas/sutradhar-v4/web/index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Sutradhar</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { 
+        height: 100%; 
+        margin: 0; 
+        padding: 0; 
+        overflow: hidden;
+      }
+      #root {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      /* Force all overflow containers to scroll */
+      #root div[style*="overflow"] {
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+      }
+      /* Target React Native Web scroll views directly */
+      .css-view-g5y9jx {
+        scrollbar-width: thin;
+        scrollbar-color: #c9a84c transparent;
+      }
+      .css-view-g5y9jx::-webkit-scrollbar {
+        width: 6px;
+      }
+      .css-view-g5y9jx::-webkit-scrollbar-thumb {
+        background-color: #c9a84c;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+EOF
