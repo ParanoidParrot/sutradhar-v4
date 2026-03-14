@@ -10,7 +10,7 @@ import * as Haptics from 'expo-haptics';
 import { colors, spacing, radius, SAMPLE_QUESTIONS } from '../theme';
 import { askQuestion, askByVoice, textToSpeech } from '../api';
 import InfoModal from '../components/InfoModal';
-import useWebScroll from '../hooks/useWebScroll';
+import useWebScroll from '../hooks/UseWebScroll';
 import WebScrollView from '../components/WebScrollView';
 
 export default function ChatScreen({ navigation }) {
