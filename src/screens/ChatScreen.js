@@ -10,7 +10,7 @@ import * as Haptics from 'expo-haptics';
 import { colors, spacing, radius, SAMPLE_QUESTIONS } from '../theme';
 import { askQuestion, askByVoice, textToSpeech } from '../api';
 import InfoModal from '../components/InfoModal';
-import useWebScroll from '../hooks/UseWebScroll';
+import useWebScroll from '../hooks/useWebScroll';
 import WebScrollView from '../components/WebScrollView';
 
 export default function ChatScreen({ navigation }) {
@@ -240,7 +240,7 @@ export default function ChatScreen({ navigation }) {
             <TouchableOpacity onPress={() => showModal('Source Passages',
               <View>{item.passages.map((p, i) => (
                 <View key={i} style={{ marginBottom: 16, borderBottomWidth: 1, borderBottomColor: colors.border, paddingBottom: 12 }}>
-                  <Text style={{ color: colors.gold, fontSize: 12, marginBottom: 4 }}>[{i+1}] {p.kanda || 'Unknown'}</Text>
+                  <Text style={{ color: colors.gold, fontSize: 12, marginBottom: 4 }}>[{i+1}] {p.kanda || p.source || 'Ramayana'}</Text>
                   <Text style={{ color: colors.textPrimary, fontSize: 13, lineHeight: 20 }}>{p.text}</Text>
                 </View>
               ))}</View>
